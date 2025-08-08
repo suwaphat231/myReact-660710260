@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './Oiiaoiia.png';
 import './App.css';
 import Hello from './Hello';  
 import Bye from './Bye';

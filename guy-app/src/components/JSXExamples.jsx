@@ -1,17 +1,18 @@
 import React from "react";  
 
+
 function JSXExamples(){
     const greeting = <h1>Hello, React with JSX!!</h1> 
-    const name = 'กุ่ย';
-    const age = 25;
+    const name = 'Suwaphat Watthakicharoen';
+    const age = 20;
 
     const currentYear = new Date().getFullYear();
 
     const user ={
-        firstName: 'guy',
-        lastName: 'eiei',
-        age: 22,
-        hobbies: ['เล่นเกม', 'นอน', 'เหมือนกับอันก่อนหน้า']
+        firstName: 'Suwaphat',
+        lastName: 'Watthakicharoen',
+        age: 21,
+        hobbies: ['กิน', 'นอน', 'ออกกำลังกาย']
     };
 
     const formatName = (user) => {
@@ -73,6 +74,81 @@ function JSXExamples(){
                         return <p>👶 {formatName(user)} ยังเป็นเด็ก</p>;
                     }
                 })()}
+            </section>
+
+            <section>
+                <h2>📋 การแสดงผล Lists</h2>
+                <h3>งานอดิเรกของ {user.firstName}:</h3>
+                <ul>
+                    {user.hobbies.map((hobby, index) => (
+                        <li key={index}>
+                            {index + 1}. {hobby}
+                        </li>
+                    ))}
+                </ul>
+                
+                {/* ตัวอย่างที่ซับซ้อนขึ้น */}
+                <div className="product-list">
+                    <h3>รายการสินค้า</h3>
+                    {[
+                        { id: 1, name: 'nike air force 1', price: 2570, inStock: true },
+                        { id: 2, name: 'Liverpool FC 25/26 Home Jersey', price: 2900, inStock: true },
+                        { id: 3, name: 'VANS SKATE OLD SKOOL', price: 3100, inStock: false }
+                    ].map(product => (
+                        <div key={product.id} className="product-item">
+                            <span>{product.name}</span>
+                            <span> - ฿{product.price.toLocaleString()}</span>
+                            <span className={product.inStock ? 'in-stock' : 'out-stock'}>
+                                {product.inStock ? ' ✅ มีสินค้า' : ' ❌ สินค้าหมด'}
+                            </span>
+                        </div>
+                    ))}
+                </div>
+            </section>
+            
+            <section>
+                <h2>🧩 React Fragment</h2>
+                <p>ใช้เมื่อไม่ต้องการ wrapper element:</p>
+                {/* Fragment แบบเต็ม */}
+                <React.Fragment>
+                    <h3>หัวข้อ</h3>
+                    <p>เนื้อหา</p>
+                </React.Fragment>
+                
+                {/* Fragment แบบย่อ */}
+                <>
+                    <h3>หัวข้ออื่น</h3>
+                    <p>เนื้อหาอื่น</p>
+                </>
+            </section>
+            
+            {/* === 6. การจัดการ Events === */}
+            <section>
+                <h2>🎯 Event Handling ใน JSX</h2>
+                <input 
+                    type="text" 
+                    placeholder="พิมพ์อะไรก็ได้..."
+                    onChange={(e) => console.log('พิมพ์:', e.target.value)}
+                />
+                
+                <select onChange={(e) => alert(`เลือก: ${e.target.value}`)}>
+                    <option value="">-- เลือกภาษา --</option>
+                    <option value="js">JavaScript</option>
+                    <option value="py">Python</option>
+                    <option value="java">Java</option>
+                    <option value="go">Go</option>
+                </select>
+            </section>
+            
+            {/* === 7. Comments ใน JSX === */}
+            <section>
+                <h2>💬 Comments ใน JSX</h2>
+                {/* นี่คือ comment ใน JSX */}
+                <p>Comment ใน JSX ต้องอยู่ใน {/* curly braces */}</p>
+                {
+                    // นี่ก็เป็น comment เช่นกัน
+                    // แต่อยู่ใน JavaScript expression
+                }
             </section>
 
         </div>
