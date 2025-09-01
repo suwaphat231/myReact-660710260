@@ -6,7 +6,8 @@ const TodoList = () => {
         { id: 1, text: 'เรียน React พื้นฐาน', completed: true },
         { id: 2, text: 'ทำความเข้าใจ Components', completed: true },
         { id: 3, text: 'ฝึก Props และ State', completed: false },
-        { id: 4, text: 'สร้างโปรเจคจริง', completed: false }
+        { id: 4, text: 'สร้างโปรเจคจริง', completed: false },
+        { id: 5, text: 'ได้ A วิชา fontend', completed: false }
     ];
     
     // คำนวณสถิติ

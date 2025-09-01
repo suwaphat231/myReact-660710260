@@ -3,7 +3,7 @@ import React from 'react';
 // Component ย่อยๆ
 const Avatar = () => (
     <img 
-        src="C:\Users\ACER\Downloads\user.png"
+        src="/boy.png"
         alt="User Avatar"
         style={{
             borderRadius: '50%',
@@ -16,13 +16,13 @@ const Avatar = () => (
 
 const UserName = () => (
     <h3 style={{ color: '#667eea', margin: '10px 0' }}>
-        สมชาย ใจดี
+        Suwaphat Watthakicharon
     </h3>
 );
 
 const UserBio = () => (
     <p style={{ color: '#666', fontSize: '14px' }}>
-        นักพัฒนา React มือใหม่ที่กำลังเรียนรู้
+        Font End newbie
     </p>
 );
 

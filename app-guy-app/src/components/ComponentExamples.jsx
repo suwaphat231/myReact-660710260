@@ -29,7 +29,7 @@ function ComponentExamples() {
                 backgroundColor: '#fafafa'
             }}>
                 <h2 style={{ color: '#333', marginBottom: '20px' }}>
-                    Simple Components
+                    Welcome to my blog
                 </h2>
                 <Welcome />
                 <Greeting />
@@ -43,7 +43,7 @@ function ComponentExamples() {
                 backgroundColor: '#fafafa'
             }}>
                 <h2 style={{ color: '#333', marginBottom: '20px' }}>
-                    Component with Logic
+                    Time
                 </h2>
                 <Clock />
             </section>
@@ -56,7 +56,7 @@ function ComponentExamples() {
                 backgroundColor: '#fafafa'
             }}>
                 <h2 style={{ color: '#333', marginBottom: '20px' }}>
-                    Component Composition
+                    MEEEE
                 </h2>
                 <UserCard />
             </section>
